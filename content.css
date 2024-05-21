@@ -1,11 +1,14 @@
+@charset "UTF-8";
+
 .dl-zendesk-icon.svelte-1tytp0d {
     display: none
 }
 
-@charset "UTF-8";[data-tooltip].svelte-1a71ske:not([data-tooltip=false]) {
+[data-tooltip].svelte-1a71ske:not([data-tooltip=false]) {
     position: relative;
-    display: block
+    display: block;
 }
+
 
 [data-tooltip].svelte-1a71ske:not([data-tooltip=false]):before,[data-tooltip].svelte-1a71ske:not([data-tooltip=false]):after {
     visibility: hidden;
