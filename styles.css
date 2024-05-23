@@ -19,11 +19,19 @@ body {
 header {
   background-color: #0056a3;
   color: white;
-  padding: 20px 0;
+  padding: 7px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.logo {
+  max-height: 100px;
+  width: auto;
+  margin-left: 840px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar */
@@ -31,10 +39,8 @@ header {
   background-color: #004080;
   color: #fff;
   padding: 10px 0;
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 11;
 }
 
 .navbar-nav {
@@ -52,6 +58,13 @@ header {
   text-decoration: none;
   padding: 10px 15px;
   display: block;
+  border-radius: 8px; /* Arrondir les coins */
+  transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  background: linear-gradient(45deg, #0056a3, #00aaff);
+  border-radius: 8px;
 }
 
 .navbar-nav ul {
@@ -61,7 +74,9 @@ header {
   left: 0;
   background-color: #004080;
   list-style: none;
-  padding: 0;
+  padding: 10px;
+  border-radius: 8px; /* Arrondir les coins du sous-menu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-width: 200px;
 }
 
@@ -69,8 +84,15 @@ header {
   display: block;
 }
 
-.navbar-nav ul a {
+.navbar-nav ul li a {
   padding: 10px;
+  border-radius: 8px; /* Arrondir les coins des éléments du sous-menu */
+  transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+.navbar-nav ul li a:hover {
+  background: linear-gradient(45deg, #0056a3, #00aaff);
+  border-radius: 8px;
 }
 
 .navbar-nav ul ul {
