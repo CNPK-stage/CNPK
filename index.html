@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNPK</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-nav">
+          <li>
+            <a href="#" onclick="loadPage('home')">Accueil</a>
+            <ul>
+              <li>
+                <a href="#" onclick="loadPage('association')">L’association</a>
+              </li>
+              <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+              <li>
+                <a href="#" onclick="loadPage('localisation')">Localisation</a>
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('reglements')"
+                  >Règlements intérieurs</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('newsletter')"
+                  >S’inscrire à la Newsletter</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" onclick="loadPage('activites')">Activités</a>
+            <ul>
+              <li><a href="#" onclick="loadPage('catalogue')">Catalogue</a></li>
+              <li>
+                <a href="#" onclick="loadPage('equipe')">L’équipe encadrante</a>
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('inscriptions')"
+                  >Inscriptions 2023-2024</a
+                >
+                <ul>
+                  <li><a href="#" onclick="loadPage('voile')">Voile</a></li>
+                  <li>
+                    <a href="#" onclick="loadPage('longe-cote')">Longe côte</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('horaires')"
+                  >Horaires de pratique</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" onclick="loadPage('evenements')"
+              >Evènements / Manifestations</a
+            >
+            <ul>
+              <li>
+                <a href="#" onclick="loadPage('stages-printemps')"
+                  >STAGES Voile en Pays de Brest Printemps 2023</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('regate-printemps')"
+                  >Régate printemps 2023</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('championnat')"
+                  >Championnat Régional de Bretagne de Longe Côte</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('baleata')"
+                  >Baléata an Dour Breizh</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="loadPage('partenaires')">Partenaires</a></li>
+          <li><a href="#" onclick="loadPage('webcam')">Webcam</a></li>
+          <li>
+            <a href="#" onclick="loadPage('meteo')">Météo</a>
+            <ul>
+              <li>
+                <a href="#" onclick="loadPage('annuaire')"
+                  >Annuaire des marées</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('windguru')"
+                  >Windguru Finistère nord</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('allo-surf')">Allo, surf !</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="loadPage('stages-ete')">Stages d’été</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <!-- Le contenu de la page sera chargé ici dynamiquement -->
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Centre Nautique Portsall-Kersaint</p>
+    </footer>
+
+    <script>
+      function loadPage(page) {
+        // Cette fonction chargera le contenu de la page demandée
+        fetch(page + ".html")
+          .then((response) => response.text())
+          .then(
+            (data) => (document.getElementById("content").innerHTML = data)
+          );
+      }
+    </script>
+  </body>
+</html>

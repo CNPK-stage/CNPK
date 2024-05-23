@@ -1,0 +1,95 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #004080;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0056a3;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-nav li {
+  position: relative;
+}
+
+.navbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.navbar-nav ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004080;
+  list-style: none;
+  padding: 0;
+  min-width: 200px;
+}
+
+.navbar-nav li:hover > ul {
+  display: block;
+}
+
+.navbar-nav ul a {
+  padding: 10px;
+}
+
+.navbar-nav ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
